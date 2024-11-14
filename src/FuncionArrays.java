@@ -10,14 +10,15 @@ public class FuncionArrays {
 
             for (int i = 0; i < lista.length; i++) {
                 System.out.println("el numero en la posicion " + (i + 1) + " : " + lista[i]);
-
             }
 
             int suma = sumaArray(lista);
 
+            int maximo = valorMaximo(lista);
+
             int minimo = valorMinimo(lista);
 
-            int invertido = invertirArray(lista);
+            invertirArray(lista);
 
             System.out.println("¿Desea ingresar otro arreglo? (si/no)");
             String respuesta = entrada.next();
@@ -62,14 +63,13 @@ public class FuncionArrays {
 
             }
 
-            System.out.println("el numero minimo de la coleccion es : " + minimo);
-
         }
+        System.out.println("el numero minimo de la coleccion es : " + minimo);
 
         return minimo;
     }
 
-    private static int invertirArray(int[] Array) {
+    private static void invertirArray(int[] Array) {
         int inicio = 0;
         int fin = Array.length - 1;
         while (inicio < fin) {
@@ -86,6 +86,20 @@ public class FuncionArrays {
         }
         System.out.println();
 
+    }
+
+    private static int valorMaximo(int[] Array) {
+        int maximo = Array[0];
+        for (int numero : Array) {
+            if (numero > maximo) {
+                maximo = numero;
+
+            }
+
+        }
+        System.out.println("el numero maximo de la coleccion es : " + maximo);
+
+        return maximo;
     }
 
 }
