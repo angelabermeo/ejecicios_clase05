@@ -47,7 +47,7 @@ public class FuncionArrays {
         return array;
     }
 
-    private static int sumaArray(int[] Array) {
+    private static void sumaArray(int[] Array) {
         int suma = 0;
         for (int numero : Array) {
             suma += numero;
@@ -55,11 +55,10 @@ public class FuncionArrays {
         }
         System.out.println("la suma de la coleccion es " + suma);
 
-        return suma;
-
+        
     }
 
-    private static int valorMinimo(int[] Array) {
+    private static void valorMinimo(int[] Array) {
         int minimo = Array[0];
         for (int numero : Array) {
             if (numero < minimo) {
@@ -69,8 +68,6 @@ public class FuncionArrays {
 
         }
         System.out.println("el numero minimo de la coleccion es : " + minimo);
-
-        return minimo;
     }
 
     private static void invertirArray(int[] Array) {
@@ -92,7 +89,7 @@ public class FuncionArrays {
 
     }
 
-    private static int valorMaximo(int[] Array) {
+    private static void valorMaximo(int[] Array) {
         int maximo = Array[0];
         for (int numero : Array) {
             if (numero > maximo) {
@@ -102,8 +99,7 @@ public class FuncionArrays {
 
         }
         System.out.println("el numero maximo de la coleccion es : " + maximo);
-
-        return maximo;
+       
     }
 
     private static void mayorAMenor(int[] Array) {
@@ -124,7 +120,7 @@ public class FuncionArrays {
         System.out.println();
     }
 
-    private static int Promedio(int[] Array) {
+    private static void Promedio(int[] Array) {
         int suma = 0;
         for (int i = 0; i < Array.length; i++) {
             suma += Array[i];
@@ -133,7 +129,14 @@ public class FuncionArrays {
         int prom = suma / Array.length;
 
         System.out.println("el promedio de la coleccion es " + prom);
-
-        return prom;
+        
     }
+
+    private static void Moda(int[] Array){
+        for (int i = 0; i < Array.length; i++) {
+            
+            
+        }
+    }
+    
 }
