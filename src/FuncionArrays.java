@@ -12,13 +12,17 @@ public class FuncionArrays {
                 System.out.println("el numero en la posicion " + (i + 1) + " : " + lista[i]);
             }
 
-            int suma = sumaArray(lista);
+            sumaArray(lista);
 
-            int maximo = valorMaximo(lista);
+            valorMaximo(lista);
 
-            int minimo = valorMinimo(lista);
+            valorMinimo(lista);
 
             invertirArray(lista);
+
+            mayorAMenor(lista);
+
+            Promedio(lista);
 
             System.out.println("¿Desea ingresar otro arreglo? (si/no)");
             String respuesta = entrada.next();
@@ -102,4 +106,34 @@ public class FuncionArrays {
         return maximo;
     }
 
+    private static void mayorAMenor(int[] Array) {
+        for (int i = 0; i < Array.length - 1; i++) {
+            for (int j = i + 1; j < Array.length; j++) {
+                if (Array[i] < Array[j]) {
+                    int temp = Array[i];
+                    Array[i] = Array[j];
+                    Array[j] = temp;
+                }
+            }
+        }
+
+        System.out.print("Arreglo ordenado de mayor a menor: ");
+        for (int numero : Array) {
+            System.out.print(numero + " ");
+        }
+        System.out.println();
+    }
+
+    private static int Promedio(int[] Array) {
+        int suma = 0;
+        for (int i = 0; i < Array.length; i++) {
+            suma += Array[i];
+
+        }
+        int prom = suma / Array.length;
+
+        System.out.println("el promedio de la coleccion es " + prom);
+
+        return prom;
+    }
 }
