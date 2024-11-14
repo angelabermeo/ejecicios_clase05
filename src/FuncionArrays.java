@@ -17,6 +17,8 @@ public class FuncionArrays {
 
             int minimo = valorMinimo(lista);
 
+            int invertido = invertirArray(lista);
+
             System.out.println("¿Desea ingresar otro arreglo? (si/no)");
             String respuesta = entrada.next();
             if (!respuesta.equalsIgnoreCase("si")) {
@@ -52,31 +54,38 @@ public class FuncionArrays {
 
     }
 
-    private static int valorMinimo(int [] Array){
-        int minimo = Array[0]; 
-        for (int numero: Array) {
+    private static int valorMinimo(int[] Array) {
+        int minimo = Array[0];
+        for (int numero : Array) {
             if (numero < minimo) {
-                minimo = numero; 
-                
+                minimo = numero;
+
             }
 
-            System.out.println("el numero minimo de la coleccion es : " +minimo);
-            
-        }
+            System.out.println("el numero minimo de la coleccion es : " + minimo);
 
+        }
 
         return minimo;
     }
 
-    private static int invertirArray(int [] Array){
+    private static int invertirArray(int[] Array) {
         int inicio = 0;
-         int fin = arreglo.length - 1;
-          while (inicio < fin) { // Intercambiar los elementos de inicio y fin int temp = arreglo[inicio]; arreglo[inicio] = arreglo[fin]; arreglo[fin] = temp; inicio++; fin--; }
-    
-}
-        return
+        int fin = Array.length - 1;
+        while (inicio < fin) {
+            int temp = Array[inicio];
+            Array[inicio] = Array[fin];
+            Array[fin] = temp;
+            inicio++;
+            fin--;
+
+        }
+        System.out.print("Arreglo invertido: ");
+        for (int numero : Array) {
+            System.out.print(numero + " ");
+        }
+        System.out.println();
+
     }
-
-
 
 }
